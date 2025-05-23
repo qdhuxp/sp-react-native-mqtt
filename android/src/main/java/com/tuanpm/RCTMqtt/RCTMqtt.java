@@ -206,7 +206,7 @@ public class RCTMqtt implements MqttCallbackExtended {
                     clientStore.load(isCertificate, options.getString("certificatePass").toCharArray());
 
                     KeyManagerFactory kmf = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-                    kmf.init(clientStore, "testPass".toCharArray());
+                    kmf.init(clientStore, options.getString("certificatePass").toCharArray());
                     KeyManager[] kms = kmf.getKeyManagers();
 
                     byte[] encodedCA = android.util.Base64.decode(caBase64, Base64.DEFAULT);
