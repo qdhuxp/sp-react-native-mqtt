@@ -19,6 +19,9 @@ interface IMqttClientOptions {
 	willQos?: QoS; // only used when will is true
 	willRetainFlag?: boolean; // only used when will is true
 	automaticReconnect?: boolean; // android only
+	certificate?: string;
+  	certificatePass?: string;
+  	ca?: string;
 }
 
 export class IMqttClient {
